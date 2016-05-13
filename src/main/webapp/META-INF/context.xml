@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context antiJARLocking="true" path="/udo">
+<Resource
+    name="jdbc/db1"
+    auth="Container"
+    type="javax.sql.DataSource"
+    maxActive="10"
+    maxIdle="3"
+    maxWait="10000"
+    driverClassName="com.mysql.jdbc.Driver"
+    url="jdbc:mysql://udoojobs.com:3306/db1?autoReconnect=true"
+    username="all"
+    password="2016"
+/>
+</Context>
