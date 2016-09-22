@@ -1,0 +1,38 @@
+
+
+
+  <div>
+    Central Address: <input type="text" ng-model="centerAddr"
+                           placeHolder="{{centerAddr}}" style="width:500px" ng-minlength="124"/></div>
+  <div>
+
+    Key word:<input type="search" name="" placeholder="{{search}}"
+           class="inputsearchform" ng-model="search" ng-minlength="4"/>
+  </div>
+  <div>
+    <button type="submit" ng-click="refreshMap()">Refresh Map</button>
+  </div>
+
+  <div >
+
+
+    <ui-gmap-google-map center='map.center'
+                        zoom='map.zoom'
+                        control="map.control">
+
+      <ui-gmap-marker ng-repeat="m in mc.markers" coords="m" icon="m.icon" click="onMarkerClicked(m)" idKey="m.id" options="m.options">
+        <ui-gmap-window ng-cloak  coords="m.coords" isIconVisibleOnClick="false" >
+          <!--<p>This is an info window at {{ m.latitude | number:4 }}, {{ m.longitude | number:4 }}!</p>-->
+          <!--<p class="muted">My marker will stay open when the window is popped up!</p>-->
+        </ui-gmap-window>
+      </ui-gmap-marker>
+
+
+
+    </ui-gmap-google-map>
+
+    <!--<map zoom="2" center="[40.74, -74.18]">-->
+      <!--<marker position="{{destination.position}}" ng-repeat="destination in destinations"></marker>-->
+    <!--</map>  </div>-->
+
+</div>
