@@ -18,7 +18,7 @@ angular
     $routeProvider
       .when('/', {
         templateUrl: 'views/searchablemap.html',
-        controller: 'MapCtrl',
+        controller: 'MapCtrl as MC',
         //controllerAs: 'main'
       })
       .otherwise({
